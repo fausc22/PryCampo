@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A6482B5D-C609-40CA-8DAA-C8C5FA4ECC9D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PryCampo</RootNamespace>
+    <AssemblyName>PryCampo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CASTEX\frmCastexMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CASTEX\frmCastexMain.Designer.cs">
+      <DependentUpon>frmCastexMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CASTEX\frmFlujoCX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CASTEX\frmFlujoCX.Designer.cs">
+      <DependentUpon>frmFlujoCX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CASTEX\frmInformeCX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CASTEX\frmInformeCX.Designer.cs">
+      <DependentUpon>frmInformeCX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CASTEX\frmPlanCuentasCX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CASTEX\frmPlanCuentasCX.Designer.cs">
+      <DependentUpon>frmPlanCuentasCX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CASTEX\frmRegistrosCX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CASTEX\frmRegistrosCX.Designer.cs">
+      <DependentUpon>frmRegistrosCX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHARITO\AGRICOLA\frmPlanCuentasAgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHARITO\AGRICOLA\frmPlanCuentasAgr.Designer.cs">
+      <DependentUpon>frmPlanCuentasAgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHARITO\AGRICOLA\frmRegistrosAgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHARITO\AGRICOLA\frmRegistrosAgr.Designer.cs">
+      <DependentUpon>frmRegistrosAgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHARITO\GANADERIA\frmCharitoGan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHARITO\GANADERIA\frmCharitoGan.Designer.cs">
+      <DependentUpon>frmCharitoGan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHARITO\frmCharitoMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHARITO\frmCharitoMain.Designer.cs">
+      <DependentUpon>frmCharitoMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHARITO\GANADERIA\frmPlanCuentasGan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHARITO\GANADERIA\frmPlanCuentasGan.Designer.cs">
+      <DependentUpon>frmPlanCuentasGan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHARITO\GANADERIA\frmRegistrosGan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHARITO\GANADERIA\frmRegistrosGan.Designer.cs">
+      <DependentUpon>frmRegistrosGan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClsGasto.cs" />
+    <Compile Include="ClsIngreso.cs" />
+    <Compile Include="frmFlujoCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFlujoCaja.Designer.cs">
+      <DependentUpon>frmFlujoCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHARITO\AGRICOLA\frmCharitoAgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHARITO\AGRICOLA\frmCharitoAgr.Designer.cs">
+      <DependentUpon>frmCharitoAgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CASTEX\frmMesPlanCuentasCX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CASTEX\frmMesPlanCuentasCX.Designer.cs">
+      <DependentUpon>frmMesPlanCuentasCX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistro.Designer.cs">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CASTEX\frmCastexMain.resx">
+      <DependentUpon>frmCastexMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CASTEX\frmFlujoCX.resx">
+      <DependentUpon>frmFlujoCX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CASTEX\frmInformeCX.resx">
+      <DependentUpon>frmInformeCX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CASTEX\frmPlanCuentasCX.resx">
+      <DependentUpon>frmPlanCuentasCX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CASTEX\frmRegistrosCX.resx">
+      <DependentUpon>frmRegistrosCX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHARITO\AGRICOLA\frmPlanCuentasAgr.resx">
+      <DependentUpon>frmPlanCuentasAgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHARITO\AGRICOLA\frmRegistrosAgr.resx">
+      <DependentUpon>frmRegistrosAgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHARITO\GANADERIA\frmCharitoGan.resx">
+      <DependentUpon>frmCharitoGan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHARITO\frmCharitoMain.resx">
+      <DependentUpon>frmCharitoMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHARITO\GANADERIA\frmPlanCuentasGan.resx">
+      <DependentUpon>frmPlanCuentasGan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHARITO\GANADERIA\frmRegistrosGan.resx">
+      <DependentUpon>frmRegistrosGan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFlujoCaja.resx">
+      <DependentUpon>frmFlujoCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHARITO\AGRICOLA\frmCharitoAgr.resx">
+      <DependentUpon>frmCharitoAgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CASTEX\frmMesPlanCuentasCX.resx">
+      <DependentUpon>frmMesPlanCuentasCX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistro.resx">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
