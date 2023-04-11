@@ -22,10 +22,7 @@ namespace PryCampo.CASTEX
 
         private void frmRegistrosCX_Load(object sender, EventArgs e)
         {
-            ClsIngreso LeerIngresos = new ClsIngreso();
-            LeerIngresos.NombreArchivo = "tipoIngresos.txt";
-            LeerIngresos.ObtenerTipos();
-            cmbTipoIngreso.Items.Add(LeerIngresos);
+            
                 
 
             
@@ -45,7 +42,7 @@ namespace PryCampo.CASTEX
                 NuevoIngreso.Tipo = cmbTipoIngreso.SelectedItem.ToString();
                 NuevoIngreso.Precio = Convert.ToInt32(txtPrecioIngreso.Text);
                 NuevoIngreso.Descripcion = txtDescripcionI.Text;
-                NuevoIngreso.Fecha = DateTime.Now;
+                NuevoIngreso.Fecha = DateTime.Now.Date;
                 NuevoIngreso.NombreArchivo = "ingresos.txt";
                 NuevoIngreso.GrabarIngreso(NuevoIngreso);
 

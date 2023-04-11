@@ -121,8 +121,8 @@
             // 
             this.cmbTipoIngreso.FormattingEnabled = true;
             this.cmbTipoIngreso.Items.AddRange(new object[] {
-            "comida",
-            "comida"});
+            "comida\t",
+            "pan"});
             this.cmbTipoIngreso.Location = new System.Drawing.Point(6, 60);
             this.cmbTipoIngreso.Name = "cmbTipoIngreso";
             this.cmbTipoIngreso.Size = new System.Drawing.Size(136, 21);

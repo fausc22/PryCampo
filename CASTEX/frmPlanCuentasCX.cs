@@ -101,7 +101,7 @@ namespace PryCampo.CASTEX
 
         private void btnEliminarGasto_Click(object sender, EventArgs e)
         {
-            if (listGasto.SelectedIndex != .1)
+            if (listGasto.SelectedIndex != -1)
             {
                 listGasto.Items.RemoveAt(listGasto.SelectedIndex);
             }
