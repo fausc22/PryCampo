@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,9 +18,17 @@ namespace PryCampo.CASTEX
             InitializeComponent();
         }
 
+        
+
         private void frmRegistrosCX_Load(object sender, EventArgs e)
         {
+            ClsIngreso LeerIngresos = new ClsIngreso();
+            LeerIngresos.NombreArchivo = "tipoIngresos.txt";
+            LeerIngresos.ObtenerTipos();
+            cmbTipoIngreso.Items.Add(LeerIngresos);
+                
 
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -27,6 +36,21 @@ namespace PryCampo.CASTEX
             this.Hide();
             frmCastexMain abrir = new frmCastexMain();
             abrir.Show();
+        }
+
+        private void btnNuevoIngreso_Click(object sender, EventArgs e)
+        {
+            ClsIngreso NuevoIngreso = new ClsIngreso();
+             
+                NuevoIngreso.Tipo = cmbTipoIngreso.SelectedItem.ToString();
+                NuevoIngreso.Precio = Convert.ToInt32(txtPrecioIngreso.Text);
+                NuevoIngreso.Descripcion = txtDescripcionI.Text;
+                NuevoIngreso.Fecha = DateTime.Now;
+                NuevoIngreso.NombreArchivo = "ingresos.txt";
+                NuevoIngreso.GrabarIngreso(NuevoIngreso);
+
+
+            MessageBox.Show("Grabacion exitosa");
         }
     }
 }

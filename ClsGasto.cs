@@ -12,5 +12,7 @@ namespace PryCampo
         public string Tipo { get; set; }
         public decimal Precio { get; set; }
         public string Descripcion { get; set; }
+
+        public List<string> TipoGasto { get; set; }
     }
 }

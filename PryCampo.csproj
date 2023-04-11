@@ -133,11 +133,11 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="CASTEX\frmMesPlanCuentasCX.cs">
+    <Compile Include="CASTEX\frmMesRegistroCX.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CASTEX\frmMesPlanCuentasCX.Designer.cs">
-      <DependentUpon>frmMesPlanCuentasCX.cs</DependentUpon>
+    <Compile Include="CASTEX\frmMesRegistroCX.Designer.cs">
+      <DependentUpon>frmMesRegistroCX.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegistro.cs">
       <SubType>Form</SubType>
@@ -189,8 +189,8 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CASTEX\frmMesPlanCuentasCX.resx">
-      <DependentUpon>frmMesPlanCuentasCX.cs</DependentUpon>
+    <EmbeddedResource Include="CASTEX\frmMesRegistroCX.resx">
+      <DependentUpon>frmMesRegistroCX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistro.resx">
       <DependentUpon>frmRegistro.cs</DependentUpon>

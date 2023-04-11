@@ -79,6 +79,7 @@
             this.btnNuevoIngreso.TabIndex = 18;
             this.btnNuevoIngreso.Text = "REGISTRAR";
             this.btnNuevoIngreso.UseVisualStyleBackColor = false;
+            this.btnNuevoIngreso.Click += new System.EventHandler(this.btnNuevoIngreso_Click);
             // 
             // txtDescripcionI
             // 
@@ -100,7 +101,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(205, 33);
+            this.label2.Location = new System.Drawing.Point(198, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 25);
             this.label2.TabIndex = 2;
@@ -119,6 +120,9 @@
             // cmbTipoIngreso
             // 
             this.cmbTipoIngreso.FormattingEnabled = true;
+            this.cmbTipoIngreso.Items.AddRange(new object[] {
+            "comida",
+            "comida"});
             this.cmbTipoIngreso.Location = new System.Drawing.Point(6, 60);
             this.cmbTipoIngreso.Name = "cmbTipoIngreso";
             this.cmbTipoIngreso.Size = new System.Drawing.Size(136, 21);

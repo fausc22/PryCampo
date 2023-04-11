@@ -30,10 +30,10 @@
         {
             this.lblTituloI = new System.Windows.Forms.Label();
             this.lblTituloG = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.txtIngreso = new System.Windows.Forms.TextBox();
+            this.txtGasto = new System.Windows.Forms.TextBox();
+            this.listIngreso = new System.Windows.Forms.ListBox();
+            this.listGasto = new System.Windows.Forms.ListBox();
             this.btnAgregarIngreso = new System.Windows.Forms.Button();
             this.btnAgregarGasto = new System.Windows.Forms.Button();
             this.btnEliminarIngreso = new System.Windows.Forms.Button();
@@ -63,39 +63,39 @@
             this.lblTituloG.TabIndex = 1;
             this.lblTituloG.Text = "NUEVO GASTO:";
             // 
-            // textBox1
+            // txtIngreso
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtIngreso.Location = new System.Drawing.Point(16, 95);
+            this.txtIngreso.Name = "txtIngreso";
+            this.txtIngreso.Size = new System.Drawing.Size(150, 20);
+            this.txtIngreso.TabIndex = 2;
+            this.txtIngreso.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txtGasto
             // 
-            this.textBox2.Location = new System.Drawing.Point(213, 95);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtGasto.Location = new System.Drawing.Point(213, 95);
+            this.txtGasto.Name = "txtGasto";
+            this.txtGasto.Size = new System.Drawing.Size(150, 20);
+            this.txtGasto.TabIndex = 3;
+            this.txtGasto.TextChanged += new System.EventHandler(this.txtGasto_TextChanged);
             // 
-            // listBox1
+            // listIngreso
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            "aa"});
-            this.listBox1.Location = new System.Drawing.Point(16, 177);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(150, 160);
-            this.listBox1.TabIndex = 4;
+            this.listIngreso.FormattingEnabled = true;
+            this.listIngreso.Location = new System.Drawing.Point(16, 177);
+            this.listIngreso.Name = "listIngreso";
+            this.listIngreso.Size = new System.Drawing.Size(150, 160);
+            this.listIngreso.TabIndex = 4;
+            this.listIngreso.SelectedIndexChanged += new System.EventHandler(this.listIngreso_SelectedIndexChanged);
             // 
-            // listBox2
+            // listGasto
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Items.AddRange(new object[] {
-            "aa"});
-            this.listBox2.Location = new System.Drawing.Point(213, 177);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(150, 160);
-            this.listBox2.TabIndex = 5;
+            this.listGasto.FormattingEnabled = true;
+            this.listGasto.Location = new System.Drawing.Point(213, 177);
+            this.listGasto.Name = "listGasto";
+            this.listGasto.Size = new System.Drawing.Size(150, 160);
+            this.listGasto.TabIndex = 5;
+            this.listGasto.SelectedIndexChanged += new System.EventHandler(this.listGasto_SelectedIndexChanged);
             // 
             // btnAgregarIngreso
             // 
@@ -107,6 +107,7 @@
             this.btnAgregarIngreso.TabIndex = 16;
             this.btnAgregarIngreso.Text = "AGREGAR NUEVO INGRESO";
             this.btnAgregarIngreso.UseVisualStyleBackColor = false;
+            this.btnAgregarIngreso.Click += new System.EventHandler(this.btnAgregarIngreso_Click);
             // 
             // btnAgregarGasto
             // 
@@ -118,6 +119,7 @@
             this.btnAgregarGasto.TabIndex = 17;
             this.btnAgregarGasto.Text = "AGREGAR NUEVO GASTO";
             this.btnAgregarGasto.UseVisualStyleBackColor = false;
+            this.btnAgregarGasto.Click += new System.EventHandler(this.btnAgregarGasto_Click);
             // 
             // btnEliminarIngreso
             // 
@@ -129,6 +131,7 @@
             this.btnEliminarIngreso.TabIndex = 18;
             this.btnEliminarIngreso.Text = "ELIMINAR INGRESO";
             this.btnEliminarIngreso.UseVisualStyleBackColor = false;
+            this.btnEliminarIngreso.Click += new System.EventHandler(this.btnEliminarIngreso_Click);
             // 
             // btnEliminarGasto
             // 
@@ -140,6 +143,7 @@
             this.btnEliminarGasto.TabIndex = 19;
             this.btnEliminarGasto.Text = "ELIMINAR GASTO";
             this.btnEliminarGasto.UseVisualStyleBackColor = false;
+            this.btnEliminarGasto.Click += new System.EventHandler(this.btnEliminarGasto_Click);
             // 
             // btnSalir
             // 
@@ -187,10 +191,10 @@
             this.Controls.Add(this.btnEliminarIngreso);
             this.Controls.Add(this.btnAgregarGasto);
             this.Controls.Add(this.btnAgregarIngreso);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.listGasto);
+            this.Controls.Add(this.listIngreso);
+            this.Controls.Add(this.txtGasto);
+            this.Controls.Add(this.txtIngreso);
             this.Controls.Add(this.lblTituloG);
             this.Controls.Add(this.lblTituloI);
             this.Name = "frmPlanCuentasCX";
@@ -206,10 +210,10 @@
 
         private System.Windows.Forms.Label lblTituloI;
         private System.Windows.Forms.Label lblTituloG;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.TextBox txtIngreso;
+        private System.Windows.Forms.TextBox txtGasto;
+        private System.Windows.Forms.ListBox listIngreso;
+        private System.Windows.Forms.ListBox listGasto;
         private System.Windows.Forms.Button btnAgregarIngreso;
         private System.Windows.Forms.Button btnAgregarGasto;
         private System.Windows.Forms.Button btnEliminarIngreso;
