@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,16 +26,27 @@ namespace PryCampo.CASTEX
             btnEliminarGasto.Enabled = false;
             btnEliminarIngreso.Enabled = false;
 
+
+
+            
+            StreamReader sr = new StreamReader(path: Path.GetFileName("tipoIngreso.txt"));
+            foreach  (string line in File.ReadLines(path: Path.GetFileName("tipoIngreso.txt")))
+            {
+                
+                
+                    listIngreso.Items.Add(line);
+                
+            }
+            sr.Close();
+            sr.Dispose();
+            
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            ClsIngreso NuevoTipo = new ClsIngreso();
             
-            NuevoTipo.Tipo = listIngreso.ToString();
-            
-            NuevoTipo.NombreArchivo = "tipoIngresos.txt";
-            NuevoTipo.GrabarTipo(NuevoTipo);
+           
 
             this.Hide();
             frmCastexMain abrir = new frmCastexMain();
@@ -63,6 +76,17 @@ namespace PryCampo.CASTEX
         private void btnAgregarIngreso_Click(object sender, EventArgs e)
         {
             listIngreso.Items.Add(txtIngreso.Text);
+
+            ClsIngreso NuevoIngreso = new ClsIngreso();
+            NuevoIngreso.NombreArchivo = "tipoIngreso.txt";
+            foreach (string item in listIngreso.Items)
+            {
+                NuevoIngreso.Tipo = item.ToString();
+            }
+
+            NuevoIngreso.GrabarTipo(NuevoIngreso);
+
+
             txtIngreso.Clear();
         }
 
@@ -72,9 +96,19 @@ namespace PryCampo.CASTEX
             {
 
                 listIngreso.Items.RemoveAt(listIngreso.SelectedIndex);
+                
             }
 
-            
+            ClsIngreso BorrarIngreso = new ClsIngreso();
+            BorrarIngreso.NombreArchivo = "tipoIngreso.txt";
+            foreach (string item in listIngreso.Items)
+            {
+                BorrarIngreso.Tipo = item.ToString();
+            }
+
+            BorrarIngreso.BorrarTipo(BorrarIngreso);
+
+
         }
 
         private void listIngreso_SelectedIndexChanged(object sender, EventArgs e)

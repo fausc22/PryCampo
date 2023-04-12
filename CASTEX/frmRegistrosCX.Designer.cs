@@ -83,6 +83,7 @@
             // 
             // txtDescripcionI
             // 
+            this.txtDescripcionI.Enabled = false;
             this.txtDescripcionI.Location = new System.Drawing.Point(66, 161);
             this.txtDescripcionI.MaxLength = 50;
             this.txtDescripcionI.Name = "txtDescripcionI";
@@ -92,10 +93,12 @@
             // 
             // txtPrecioIngreso
             // 
+            this.txtPrecioIngreso.Enabled = false;
             this.txtPrecioIngreso.Location = new System.Drawing.Point(183, 61);
             this.txtPrecioIngreso.Name = "txtPrecioIngreso";
             this.txtPrecioIngreso.Size = new System.Drawing.Size(136, 20);
             this.txtPrecioIngreso.TabIndex = 3;
+            this.txtPrecioIngreso.TextChanged += new System.EventHandler(this.txtPrecioIngreso_TextChanged);
             // 
             // label2
             // 
@@ -119,6 +122,7 @@
             // 
             // cmbTipoIngreso
             // 
+            this.cmbTipoIngreso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoIngreso.FormattingEnabled = true;
             this.cmbTipoIngreso.Items.AddRange(new object[] {
             "comida\t",
@@ -127,6 +131,7 @@
             this.cmbTipoIngreso.Name = "cmbTipoIngreso";
             this.cmbTipoIngreso.Size = new System.Drawing.Size(136, 21);
             this.cmbTipoIngreso.TabIndex = 1;
+            this.cmbTipoIngreso.SelectedIndexChanged += new System.EventHandler(this.cmbTipoIngreso_SelectedIndexChanged);
             // 
             // lblTipo
             // 
@@ -166,6 +171,7 @@
             // 
             // txtDescripcionG
             // 
+            this.txtDescripcionG.Enabled = false;
             this.txtDescripcionG.Location = new System.Drawing.Point(66, 161);
             this.txtDescripcionG.MaxLength = 50;
             this.txtDescripcionG.Name = "txtDescripcionG";
@@ -175,6 +181,7 @@
             // 
             // txtPrecioGasto
             // 
+            this.txtPrecioGasto.Enabled = false;
             this.txtPrecioGasto.Location = new System.Drawing.Point(183, 61);
             this.txtPrecioGasto.Name = "txtPrecioGasto";
             this.txtPrecioGasto.Size = new System.Drawing.Size(136, 20);
@@ -202,11 +209,13 @@
             // 
             // cmbTipoGasto
             // 
+            this.cmbTipoGasto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoGasto.FormattingEnabled = true;
             this.cmbTipoGasto.Location = new System.Drawing.Point(6, 60);
             this.cmbTipoGasto.Name = "cmbTipoGasto";
             this.cmbTipoGasto.Size = new System.Drawing.Size(136, 21);
             this.cmbTipoGasto.TabIndex = 1;
+            this.cmbTipoGasto.SelectedIndexChanged += new System.EventHandler(this.cmbTipoGasto_SelectedIndexChanged);
             // 
             // label4
             // 

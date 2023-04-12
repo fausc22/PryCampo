@@ -23,9 +23,9 @@ namespace PryCampo.CASTEX
         private void frmRegistrosCX_Load(object sender, EventArgs e)
         {
             
-                
 
-            
+
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -48,6 +48,37 @@ namespace PryCampo.CASTEX
 
 
             MessageBox.Show("Grabacion exitosa");
+        }
+
+        private void txtPrecioIngreso_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbTipoIngreso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTipoIngreso.SelectedIndex != -1)
+            {
+                txtPrecioIngreso.Enabled = true;
+            }
+
+            if (cmbTipoIngreso.SelectedIndex != -1)
+            {
+                txtDescripcionI.Enabled = true;
+            }
+        }
+
+        private void cmbTipoGasto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTipoGasto.SelectedIndex != -1)
+            {
+                txtPrecioGasto.Enabled = true;
+            }
+
+            if (cmbTipoIngreso.SelectedIndex != -1)
+            {
+                txtDescripcionG.Enabled = true;
+            }
         }
     }
 }

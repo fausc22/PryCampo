@@ -17,7 +17,7 @@ namespace PryCampo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRegistrosCX());
+            Application.Run(new frmPlanCuentasCX());
         }
     }
 }

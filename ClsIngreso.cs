@@ -50,6 +50,21 @@ namespace PryCampo
             return resultado;
         }
 
+        public bool BorrarTipo(ClsIngreso NuevoTipo)
+        {
+            bool resultado = false;
+            if (NombreArchivo != "")
+            {
+                StreamWriter sw = new StreamWriter(NombreArchivo, false);
+
+                sw.WriteLine(NuevoTipo.Tipo);
+                sw.Close();
+                sw.Dispose();
+                resultado = true;
+            }
+            return resultado;
+        }
+
         public List<ClsIngreso> ObtenerTipos()
         {
             List<ClsIngreso> ListaTipos = new List<ClsIngreso>();
