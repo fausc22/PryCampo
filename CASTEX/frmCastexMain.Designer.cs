@@ -133,6 +133,7 @@
             this.Name = "frmCastexMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FC SOFTWARE ©";
+            this.Load += new System.EventHandler(this.frmCastexMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

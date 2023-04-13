@@ -10,7 +10,7 @@ namespace PryCampo
 {
     internal class ClsIngreso
     {
-        public DateTime Fecha { get; set; }
+        public string Fecha { get; set; }
         public string Tipo { get; set; }
         public decimal Precio { get; set; }
         public string Descripcion { get; set; }
@@ -65,7 +65,7 @@ namespace PryCampo
             return resultado;
         }
 
-        public List<ClsIngreso> ObtenerTipos()
+        public List<ClsIngreso> ObtenerIngresos()
         {
             List<ClsIngreso> ListaTipos = new List<ClsIngreso>();
             string Linea;
@@ -77,6 +77,9 @@ namespace PryCampo
                     Linea = sr.ReadLine();
                     ClsIngreso TipoIngreso = new ClsIngreso();
                     TipoIngreso.Tipo = Linea.Split(',')[0];
+                    TipoIngreso.Precio = decimal.Parse(Linea.Split(',')[1],CultureInfo.InvariantCulture);
+                    TipoIngreso.Descripcion = Linea.Split(',')[2];
+                    TipoIngreso.Fecha = Linea.Split(',')[3];
                     ListaTipos.Add(TipoIngreso);
                 }
                 sr.Close();

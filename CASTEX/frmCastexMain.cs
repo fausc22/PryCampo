@@ -52,5 +52,10 @@ namespace PryCampo
             frmFlujoCX frm = new frmFlujoCX();
             frm.Show();
         }
+
+        private void frmCastexMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

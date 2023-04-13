@@ -88,6 +88,7 @@ namespace PryCampo.CASTEX
 
 
             txtIngreso.Clear();
+            btnAgregarIngreso.Enabled = false;
         }
 
         private void btnEliminarIngreso_Click(object sender, EventArgs e)

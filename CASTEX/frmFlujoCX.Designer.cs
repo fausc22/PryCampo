@@ -35,7 +35,7 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvIngreso = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,7 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTotalIngreso = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.btnAyuda = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIngreso)).BeginInit();
             this.SuspendLayout();
             // 
             // lblingreso
@@ -118,19 +118,19 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Width = 190;
             // 
-            // dataGridView1
+            // dgvIngreso
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvIngreso.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvIngreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIngreso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 117);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(624, 215);
-            this.dataGridView1.TabIndex = 6;
+            this.dgvIngreso.Location = new System.Drawing.Point(12, 117);
+            this.dgvIngreso.Name = "dgvIngreso";
+            this.dgvIngreso.Size = new System.Drawing.Size(624, 215);
+            this.dgvIngreso.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -237,14 +237,15 @@
             this.textBox1.Size = new System.Drawing.Size(108, 20);
             this.textBox1.TabIndex = 29;
             // 
-            // textBox2
+            // txtTotalIngreso
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Chartreuse;
-            this.textBox2.Location = new System.Drawing.Point(141, 383);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(108, 20);
-            this.textBox2.TabIndex = 31;
+            this.txtTotalIngreso.BackColor = System.Drawing.Color.Chartreuse;
+            this.txtTotalIngreso.Location = new System.Drawing.Point(141, 383);
+            this.txtTotalIngreso.Name = "txtTotalIngreso";
+            this.txtTotalIngreso.ReadOnly = true;
+            this.txtTotalIngreso.Size = new System.Drawing.Size(108, 20);
+            this.txtTotalIngreso.TabIndex = 31;
+            this.txtTotalIngreso.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label4
             // 
@@ -296,6 +297,7 @@
             this.btnSalir.TabIndex = 36;
             this.btnSalir.Text = "ATRAS";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnAyuda
             // 
@@ -330,7 +332,7 @@
             this.Controls.Add(this.btnHistoria);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtTotalIngreso);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
@@ -340,7 +342,7 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnNuevoGasto);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvIngreso);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblingreso);
@@ -348,7 +350,7 @@
             this.Text = "frmFlujoCX";
             this.Load += new System.EventHandler(this.frmFlujoCX_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIngreso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -362,7 +364,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvIngreso;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
@@ -375,7 +377,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTotalIngreso;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label7;

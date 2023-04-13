@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -22,8 +23,17 @@ namespace PryCampo.CASTEX
 
         private void frmRegistrosCX_Load(object sender, EventArgs e)
         {
-            
 
+            StreamReader sr = new StreamReader(path: Path.GetFileName("tipoIngreso.txt"));
+            foreach (string line in File.ReadLines(path: Path.GetFileName("tipoIngreso.txt")))
+            {
+
+
+                cmbTipoIngreso.Items.Add(line);
+
+            }
+            sr.Close();
+            sr.Dispose();
 
 
         }
@@ -37,12 +47,13 @@ namespace PryCampo.CASTEX
 
         private void btnNuevoIngreso_Click(object sender, EventArgs e)
         {
+            
             ClsIngreso NuevoIngreso = new ClsIngreso();
              
                 NuevoIngreso.Tipo = cmbTipoIngreso.SelectedItem.ToString();
                 NuevoIngreso.Precio = Convert.ToInt32(txtPrecioIngreso.Text);
                 NuevoIngreso.Descripcion = txtDescripcionI.Text;
-                NuevoIngreso.Fecha = DateTime.Now.Date;
+            NuevoIngreso.Fecha = DateTime.Now.Date.ToString("dd/MM/yyyy");
                 NuevoIngreso.NombreArchivo = "ingresos.txt";
                 NuevoIngreso.GrabarIngreso(NuevoIngreso);
 
