@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -145,6 +148,12 @@
     <Compile Include="frmRegistro.Designer.cs">
       <DependentUpon>frmRegistro.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSQL.Designer.cs">
+      <DependentUpon>frmSQL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CASTEX\frmCastexMain.resx">
@@ -194,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistro.resx">
       <DependentUpon>frmRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSQL.resx">
+      <DependentUpon>frmSQL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
