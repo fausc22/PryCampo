@@ -27,9 +27,7 @@ namespace PryCampo
 
         private void btnPlanCuenta_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmPlanCuentasCX abrir = new frmPlanCuentasCX();
-            abrir.Show();
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

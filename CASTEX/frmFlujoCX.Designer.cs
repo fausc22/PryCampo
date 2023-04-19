@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblingreso = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -56,8 +57,10 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.clsTablaIngresoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIngreso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTablaIngresoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblingreso
@@ -120,6 +123,7 @@
             // 
             // dgvIngreso
             // 
+            this.dgvIngreso.AutoGenerateColumns = false;
             this.dgvIngreso.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvIngreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIngreso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -127,6 +131,7 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
+            this.dgvIngreso.DataSource = this.clsTablaIngresoBindingSource;
             this.dgvIngreso.Location = new System.Drawing.Point(12, 117);
             this.dgvIngreso.Name = "dgvIngreso";
             this.dgvIngreso.Size = new System.Drawing.Size(624, 215);
@@ -320,6 +325,10 @@
             this.label8.TabIndex = 37;
             this.label8.Text = "ENERO";
             // 
+            // clsTablaIngresoBindingSource
+            // 
+            this.clsTablaIngresoBindingSource.DataSource = typeof(PryCampo.ClsTablaIngreso);
+            // 
             // frmFlujoCX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,6 +360,7 @@
             this.Load += new System.EventHandler(this.frmFlujoCX_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIngreso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTablaIngresoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,5 +395,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.BindingSource clsTablaIngresoBindingSource;
     }
 }

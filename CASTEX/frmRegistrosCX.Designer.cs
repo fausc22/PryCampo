@@ -34,7 +34,7 @@
             this.txtPrecioIngreso = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
-            this.cmbTipoIngreso = new System.Windows.Forms.ComboBox();
+            this.cmbMes = new System.Windows.Forms.ComboBox();
             this.lblTipo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnNuevoGasto = new System.Windows.Forms.Button();
@@ -42,7 +42,6 @@
             this.txtPrecioGasto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmbTipoGasto = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lblingreso = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,28 +49,33 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.btnHistoria = new System.Windows.Forms.Button();
+            this.txtGasto = new System.Windows.Forms.TextBox();
+            this.txtIngreso = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.mrcIngreso.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mrcIngreso
             // 
+            this.mrcIngreso.Controls.Add(this.txtIngreso);
             this.mrcIngreso.Controls.Add(this.btnNuevoIngreso);
             this.mrcIngreso.Controls.Add(this.txtDescripcionI);
             this.mrcIngreso.Controls.Add(this.txtPrecioIngreso);
             this.mrcIngreso.Controls.Add(this.label2);
             this.mrcIngreso.Controls.Add(this.lblDescripcion);
-            this.mrcIngreso.Controls.Add(this.cmbTipoIngreso);
             this.mrcIngreso.Controls.Add(this.lblTipo);
-            this.mrcIngreso.Location = new System.Drawing.Point(4, 124);
+            this.mrcIngreso.Location = new System.Drawing.Point(4, 192);
             this.mrcIngreso.Name = "mrcIngreso";
             this.mrcIngreso.Size = new System.Drawing.Size(347, 308);
             this.mrcIngreso.TabIndex = 0;
             this.mrcIngreso.TabStop = false;
+            this.mrcIngreso.Enter += new System.EventHandler(this.mrcIngreso_Enter);
             // 
             // btnNuevoIngreso
             // 
             this.btnNuevoIngreso.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnNuevoIngreso.Enabled = false;
             this.btnNuevoIngreso.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnNuevoIngreso.Location = new System.Drawing.Point(89, 268);
             this.btnNuevoIngreso.Name = "btnNuevoIngreso";
@@ -95,10 +99,12 @@
             // 
             this.txtPrecioIngreso.Enabled = false;
             this.txtPrecioIngreso.Location = new System.Drawing.Point(183, 61);
+            this.txtPrecioIngreso.MaxLength = 10;
             this.txtPrecioIngreso.Name = "txtPrecioIngreso";
             this.txtPrecioIngreso.Size = new System.Drawing.Size(136, 20);
             this.txtPrecioIngreso.TabIndex = 3;
             this.txtPrecioIngreso.TextChanged += new System.EventHandler(this.txtPrecioIngreso_TextChanged);
+            this.txtPrecioIngreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioIngreso_KeyPress);
             // 
             // label2
             // 
@@ -120,18 +126,28 @@
             this.lblDescripcion.TabIndex = 13;
             this.lblDescripcion.Text = "DESCRIPCION";
             // 
-            // cmbTipoIngreso
+            // cmbMes
             // 
-            this.cmbTipoIngreso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoIngreso.FormattingEnabled = true;
-            this.cmbTipoIngreso.Items.AddRange(new object[] {
-            "comida\t",
-            "pan"});
-            this.cmbTipoIngreso.Location = new System.Drawing.Point(6, 60);
-            this.cmbTipoIngreso.Name = "cmbTipoIngreso";
-            this.cmbTipoIngreso.Size = new System.Drawing.Size(136, 21);
-            this.cmbTipoIngreso.TabIndex = 1;
-            this.cmbTipoIngreso.SelectedIndexChanged += new System.EventHandler(this.cmbTipoIngreso_SelectedIndexChanged);
+            this.cmbMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMes.FormattingEnabled = true;
+            this.cmbMes.Items.AddRange(new object[] {
+            "ENERO",
+            "FEBRERO",
+            "MARZO",
+            "ABRIL",
+            "MAYO",
+            "JUNIO",
+            "JULIO",
+            "AGOSTO",
+            "SEPTIEMBRE",
+            "OCTUBRE",
+            "NOVIEMBRE",
+            "DICIEMBRE"});
+            this.cmbMes.Location = new System.Drawing.Point(306, 103);
+            this.cmbMes.Name = "cmbMes";
+            this.cmbMes.Size = new System.Drawing.Size(136, 21);
+            this.cmbMes.TabIndex = 1;
+            this.cmbMes.SelectedIndexChanged += new System.EventHandler(this.cmbTipoIngreso_SelectedIndexChanged);
             // 
             // lblTipo
             // 
@@ -145,22 +161,24 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtGasto);
             this.groupBox1.Controls.Add(this.btnNuevoGasto);
             this.groupBox1.Controls.Add(this.txtDescripcionG);
             this.groupBox1.Controls.Add(this.txtPrecioGasto);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.cmbTipoGasto);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(402, 124);
+            this.groupBox1.Location = new System.Drawing.Point(402, 192);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(347, 308);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnNuevoGasto
             // 
             this.btnNuevoGasto.BackColor = System.Drawing.Color.Crimson;
+            this.btnNuevoGasto.Enabled = false;
             this.btnNuevoGasto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnNuevoGasto.Location = new System.Drawing.Point(89, 268);
             this.btnNuevoGasto.Name = "btnNuevoGasto";
@@ -168,6 +186,7 @@
             this.btnNuevoGasto.TabIndex = 18;
             this.btnNuevoGasto.Text = "REGISTRAR";
             this.btnNuevoGasto.UseVisualStyleBackColor = false;
+            this.btnNuevoGasto.Click += new System.EventHandler(this.btnNuevoGasto_Click);
             // 
             // txtDescripcionG
             // 
@@ -182,10 +201,13 @@
             // txtPrecioGasto
             // 
             this.txtPrecioGasto.Enabled = false;
-            this.txtPrecioGasto.Location = new System.Drawing.Point(183, 61);
+            this.txtPrecioGasto.Location = new System.Drawing.Point(194, 61);
+            this.txtPrecioGasto.MaxLength = 10;
             this.txtPrecioGasto.Name = "txtPrecioGasto";
             this.txtPrecioGasto.Size = new System.Drawing.Size(136, 20);
             this.txtPrecioGasto.TabIndex = 3;
+            this.txtPrecioGasto.TextChanged += new System.EventHandler(this.txtPrecioGasto_TextChanged);
+            this.txtPrecioGasto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioGasto_KeyPress);
             // 
             // label1
             // 
@@ -207,16 +229,6 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "DESCRIPCION";
             // 
-            // cmbTipoGasto
-            // 
-            this.cmbTipoGasto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoGasto.FormattingEnabled = true;
-            this.cmbTipoGasto.Location = new System.Drawing.Point(6, 60);
-            this.cmbTipoGasto.Name = "cmbTipoGasto";
-            this.cmbTipoGasto.Size = new System.Drawing.Size(136, 21);
-            this.cmbTipoGasto.TabIndex = 1;
-            this.cmbTipoGasto.SelectedIndexChanged += new System.EventHandler(this.cmbTipoGasto_SelectedIndexChanged);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -231,21 +243,23 @@
             // 
             this.lblingreso.AutoSize = true;
             this.lblingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblingreso.Location = new System.Drawing.Point(102, 90);
+            this.lblingreso.Location = new System.Drawing.Point(102, 158);
             this.lblingreso.Name = "lblingreso";
             this.lblingreso.Size = new System.Drawing.Size(166, 31);
             this.lblingreso.TabIndex = 2;
             this.lblingreso.Text = "INGRESOS";
+            this.lblingreso.Click += new System.EventHandler(this.lblingreso_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(502, 90);
+            this.label6.Location = new System.Drawing.Point(502, 158);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(133, 31);
             this.label6.TabIndex = 3;
             this.label6.Text = "GASTOS";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -261,7 +275,7 @@
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Gray;
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSalir.Location = new System.Drawing.Point(691, 502);
+            this.btnSalir.Location = new System.Drawing.Point(691, 599);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(90, 31);
             this.btnSalir.TabIndex = 23;
@@ -273,35 +287,65 @@
             // 
             this.btnAyuda.BackColor = System.Drawing.Color.Gray;
             this.btnAyuda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAyuda.Location = new System.Drawing.Point(585, 502);
+            this.btnAyuda.Location = new System.Drawing.Point(585, 599);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(90, 31);
             this.btnAyuda.TabIndex = 22;
             this.btnAyuda.Text = "AYUDA";
             this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // btnHistoria
             // 
             this.btnHistoria.BackColor = System.Drawing.Color.OrangeRed;
             this.btnHistoria.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnHistoria.Location = new System.Drawing.Point(279, 449);
+            this.btnHistoria.Location = new System.Drawing.Point(279, 523);
             this.btnHistoria.Name = "btnHistoria";
             this.btnHistoria.Size = new System.Drawing.Size(188, 68);
             this.btnHistoria.TabIndex = 24;
             this.btnHistoria.Text = "HISTORIAL DE REGISTROS";
             this.btnHistoria.UseVisualStyleBackColor = false;
+            this.btnHistoria.Click += new System.EventHandler(this.btnHistoria_Click);
+            // 
+            // txtGasto
+            // 
+            this.txtGasto.Enabled = false;
+            this.txtGasto.Location = new System.Drawing.Point(6, 61);
+            this.txtGasto.Name = "txtGasto";
+            this.txtGasto.Size = new System.Drawing.Size(136, 20);
+            this.txtGasto.TabIndex = 19;
+            // 
+            // txtIngreso
+            // 
+            this.txtIngreso.Enabled = false;
+            this.txtIngreso.Location = new System.Drawing.Point(8, 61);
+            this.txtIngreso.Name = "txtIngreso";
+            this.txtIngreso.Size = new System.Drawing.Size(136, 20);
+            this.txtIngreso.TabIndex = 19;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(264, 69);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(236, 31);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Seleccionar MES";
             // 
             // frmRegistrosCX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(805, 545);
+            this.ClientSize = new System.Drawing.Size(807, 643);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnHistoria);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.cmbMes);
             this.Controls.Add(this.lblingreso);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.mrcIngreso);
@@ -325,7 +369,7 @@
         private System.Windows.Forms.TextBox txtPrecioIngreso;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.ComboBox cmbTipoIngreso;
+        private System.Windows.Forms.ComboBox cmbMes;
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Button btnNuevoIngreso;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -334,7 +378,6 @@
         private System.Windows.Forms.TextBox txtPrecioGasto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbTipoGasto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblingreso;
         private System.Windows.Forms.Label label6;
@@ -342,5 +385,8 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Button btnHistoria;
+        private System.Windows.Forms.TextBox txtIngreso;
+        private System.Windows.Forms.TextBox txtGasto;
+        private System.Windows.Forms.Label label5;
     }
 }

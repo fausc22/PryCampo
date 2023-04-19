@@ -68,12 +68,6 @@
     <Compile Include="CASTEX\frmInformeCX.Designer.cs">
       <DependentUpon>frmInformeCX.cs</DependentUpon>
     </Compile>
-    <Compile Include="CASTEX\frmPlanCuentasCX.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CASTEX\frmPlanCuentasCX.Designer.cs">
-      <DependentUpon>frmPlanCuentasCX.cs</DependentUpon>
-    </Compile>
     <Compile Include="CASTEX\frmRegistrosCX.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +110,8 @@
     <Compile Include="CHARITO\GANADERIA\frmRegistrosGan.Designer.cs">
       <DependentUpon>frmRegistrosGan.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClsTablaIngreso.cs" />
+    <Compile Include="ConexionDB.cs" />
     <Compile Include="ClsGasto.cs" />
     <Compile Include="ClsIngreso.cs" />
     <Compile Include="frmFlujoCaja.cs">
@@ -135,12 +131,6 @@
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CASTEX\frmMesRegistroCX.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CASTEX\frmMesRegistroCX.Designer.cs">
-      <DependentUpon>frmMesRegistroCX.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegistro.cs">
       <SubType>Form</SubType>
@@ -164,9 +154,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CASTEX\frmInformeCX.resx">
       <DependentUpon>frmInformeCX.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CASTEX\frmPlanCuentasCX.resx">
-      <DependentUpon>frmPlanCuentasCX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CASTEX\frmRegistrosCX.resx">
       <DependentUpon>frmRegistrosCX.cs</DependentUpon>
@@ -198,9 +185,6 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CASTEX\frmMesRegistroCX.resx">
-      <DependentUpon>frmMesRegistroCX.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmRegistro.resx">
       <DependentUpon>frmRegistro.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +200,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\ClsTablaIngreso.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
