@@ -110,10 +110,10 @@
     <Compile Include="CHARITO\GANADERIA\frmRegistrosGan.Designer.cs">
       <DependentUpon>frmRegistrosGan.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClsTablaIngreso.cs" />
+    <Compile Include="ClsTablaGasto.cs" />
     <Compile Include="ConexionDB.cs" />
-    <Compile Include="ClsGasto.cs" />
-    <Compile Include="ClsIngreso.cs" />
+    <Compile Include="ConexionDBStatic.cs" />
+    <Compile Include="ClsTablaIngreso.cs" />
     <Compile Include="frmFlujoCaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +144,7 @@
     <Compile Include="frmSQL.Designer.cs">
       <DependentUpon>frmSQL.cs</DependentUpon>
     </Compile>
+    <Compile Include="Productos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CASTEX\frmCastexMain.resx">
@@ -201,6 +202,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Properties\DataSources\ClsTablaIngreso.datasource" />
+    <None Include="Properties\DataSources\Productos.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

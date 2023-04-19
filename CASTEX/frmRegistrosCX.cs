@@ -132,7 +132,7 @@ namespace PryCampo.CASTEX
                 }
             }
 
-            MySqlConnection conexionDB = ConexionDB.conexion();
+            MySqlConnection conexionDB = ConexionDBStatic.conexion();
             conexionDB.Open();
 
             try
@@ -354,7 +354,7 @@ namespace PryCampo.CASTEX
                 }
             }
 
-            MySqlConnection conexionDB = ConexionDB.conexion();
+            MySqlConnection conexionDB = ConexionDBStatic.conexion();
             conexionDB.Open();
 
             try

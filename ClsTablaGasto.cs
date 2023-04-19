@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace PryCampo
 {
-    class ClsTablaIngreso : ConexionDB
+    class ClsTablaGasto : ConexionDB
     {
-        public List<Object> consultaIngreso(string dato)
+        public List<Object> consultaGasto(string dato)
         {
             MySqlDataReader reader;
             List<Object> lista = new List<Object>();
             string sql = "";
 
-            if (dato == null) 
+            if (dato == null)
             {
-                sql = "SELECT tipo, precio, descripcion, fecha FROM ingresos_mayo23 ORDER BY tipo ASC";
+                sql = "SELECT tipo, precio, descripcion, fecha FROM gastos_mayo23 ORDER BY tipo ASC";
             }
 
             try
@@ -38,17 +38,11 @@ namespace PryCampo
                     lista.Add(_producto);
                 }
             }
-            catch (MySqlException ex) 
+            catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message.ToString());
             }
             return lista;
-
-
-           
-            
-
-
         }
     }
 }

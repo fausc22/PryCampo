@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace PryCampo
 {
-     class ConexionDB
+    class ConexionDBStatic
     {
-        public MySqlConnection conexion()
+        public static MySqlConnection conexion()
         {
             String servidor = "localhost";
             String puerto = "3306";
@@ -28,7 +28,7 @@ namespace PryCampo
 
                 return conexionDB;
             }
-            catch(MySqlException ex)
+            catch (MySqlException ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
                 return null;

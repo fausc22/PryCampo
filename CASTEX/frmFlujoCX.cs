@@ -18,6 +18,8 @@ namespace PryCampo.CASTEX
         {
             InitializeComponent();
             cargarTablaIngreso(null);
+            cargarTablaGasto(null);
+            
         }
 
         private void frmFlujoCX_Load(object sender, EventArgs e)
@@ -48,10 +50,18 @@ namespace PryCampo.CASTEX
 
         private void cargarTablaIngreso(string dato)
         {
-            List<ClsIngreso> lista = new List<ClsIngreso>();
-            ClsTablaIngreso ListaIngresos = new ClsTablaIngreso();
-            dgvIngreso.DataSource = ListaIngresos.consulta(dato);
+            List<Productos> lista = new List<Productos>();  
+            ClsTablaIngreso TablaIngreso = new ClsTablaIngreso();
+            dgvIngreso.DataSource = TablaIngreso.consultaIngreso(dato);
             
+        }
+
+        private void cargarTablaGasto(string dato)
+        {
+            List<Productos> lista = new List<Productos>();
+            ClsTablaGasto TablaGasto = new ClsTablaGasto();
+            dgvGasto.DataSource = TablaGasto.consultaGasto(dato);
+
         }
     }
 }
