@@ -39,8 +39,7 @@ namespace PryCampo
 
         private void btnFlujo_Click(object sender, EventArgs e)
         {
-            frmFlujoCaja obj = new frmFlujoCaja();
-            obj.ShowDialog();
+            
         }
 
         private void btnInforme_Click(object sender, EventArgs e)

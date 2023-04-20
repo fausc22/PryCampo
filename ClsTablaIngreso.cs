@@ -12,6 +12,9 @@ namespace PryCampo
 
 
         public string Mes { get; set; }
+        public decimal Ingresos { get; set; }
+        
+
         public List<Object> consultaIngreso(string dato)
         {
             MySqlDataReader reader;
@@ -38,6 +41,7 @@ namespace PryCampo
                     _producto.Precio = decimal.Parse(reader.GetString(1));
                     _producto.Descripcion = reader.GetString(2);
                     _producto.Fecha = reader.GetString(3);
+                    
                     lista.Add(_producto);
                 }
             }
@@ -53,5 +57,7 @@ namespace PryCampo
 
 
         }
+
+       
     }
 }
