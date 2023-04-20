@@ -46,18 +46,18 @@
             this.btnHistoria = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.dgvIngreso = new System.Windows.Forms.DataGridView();
             this.dgvGasto = new System.Windows.Forms.DataGridView();
+            this.cmbMes = new System.Windows.Forms.ComboBox();
+            this.fechaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIngreso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGasto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
@@ -237,16 +237,6 @@
             this.btnAyuda.Text = "AYUDA";
             this.btnAyuda.UseVisualStyleBackColor = false;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(646, 46);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 25);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "ENERO";
-            // 
             // dgvIngreso
             // 
             this.dgvIngreso.AutoGenerateColumns = false;
@@ -277,6 +267,53 @@
             this.dgvGasto.Size = new System.Drawing.Size(594, 215);
             this.dgvGasto.TabIndex = 39;
             // 
+            // cmbMes
+            // 
+            this.cmbMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMes.FormattingEnabled = true;
+            this.cmbMes.Items.AddRange(new object[] {
+            "ENERO",
+            "FEBRERO",
+            "MARZO",
+            "ABRIL",
+            "MAYO",
+            "JUNIO",
+            "JULIO",
+            "AGOSTO",
+            "SEPTIEMBRE",
+            "OCTUBRE",
+            "NOVIEMBRE",
+            "DICIEMBRE"});
+            this.cmbMes.Location = new System.Drawing.Point(622, 49);
+            this.cmbMes.Name = "cmbMes";
+            this.cmbMes.Size = new System.Drawing.Size(136, 21);
+            this.cmbMes.TabIndex = 40;
+            this.cmbMes.SelectedIndexChanged += new System.EventHandler(this.cmbMes_SelectedIndexChanged);
+            // 
+            // fechaDataGridViewTextBoxColumn1
+            // 
+            this.fechaDataGridViewTextBoxColumn1.DataPropertyName = "Fecha";
+            this.fechaDataGridViewTextBoxColumn1.HeaderText = "Fecha";
+            this.fechaDataGridViewTextBoxColumn1.Name = "fechaDataGridViewTextBoxColumn1";
+            // 
+            // tipoDataGridViewTextBoxColumn1
+            // 
+            this.tipoDataGridViewTextBoxColumn1.DataPropertyName = "Tipo";
+            this.tipoDataGridViewTextBoxColumn1.HeaderText = "Tipo";
+            this.tipoDataGridViewTextBoxColumn1.Name = "tipoDataGridViewTextBoxColumn1";
+            // 
+            // precioDataGridViewTextBoxColumn1
+            // 
+            this.precioDataGridViewTextBoxColumn1.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn1.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn1.Name = "precioDataGridViewTextBoxColumn1";
+            // 
+            // descripcionDataGridViewTextBoxColumn1
+            // 
+            this.descripcionDataGridViewTextBoxColumn1.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn1.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn1.Name = "descripcionDataGridViewTextBoxColumn1";
+            // 
             // productosBindingSource
             // 
             this.productosBindingSource.DataSource = typeof(PryCampo.Productos);
@@ -305,39 +342,15 @@
             this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
             this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
             // 
-            // fechaDataGridViewTextBoxColumn1
-            // 
-            this.fechaDataGridViewTextBoxColumn1.DataPropertyName = "Fecha";
-            this.fechaDataGridViewTextBoxColumn1.HeaderText = "Fecha";
-            this.fechaDataGridViewTextBoxColumn1.Name = "fechaDataGridViewTextBoxColumn1";
-            // 
-            // tipoDataGridViewTextBoxColumn1
-            // 
-            this.tipoDataGridViewTextBoxColumn1.DataPropertyName = "Tipo";
-            this.tipoDataGridViewTextBoxColumn1.HeaderText = "Tipo";
-            this.tipoDataGridViewTextBoxColumn1.Name = "tipoDataGridViewTextBoxColumn1";
-            // 
-            // precioDataGridViewTextBoxColumn1
-            // 
-            this.precioDataGridViewTextBoxColumn1.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn1.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn1.Name = "precioDataGridViewTextBoxColumn1";
-            // 
-            // descripcionDataGridViewTextBoxColumn1
-            // 
-            this.descripcionDataGridViewTextBoxColumn1.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn1.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn1.Name = "descripcionDataGridViewTextBoxColumn1";
-            // 
             // frmFlujoCX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1374, 609);
+            this.Controls.Add(this.cmbMes);
             this.Controls.Add(this.dgvGasto);
             this.Controls.Add(this.dgvIngreso);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnHistoria);
@@ -384,7 +397,6 @@
         private System.Windows.Forms.Button btnHistoria;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnAyuda;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvIngreso;
         private System.Windows.Forms.DataGridView dgvGasto;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
@@ -396,5 +408,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.ComboBox cmbMes;
     }
 }

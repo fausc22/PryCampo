@@ -9,6 +9,8 @@ namespace PryCampo
 {
     class ClsTablaGasto : ConexionDB
     {
+        public string Mes { get; set; }
+
         public List<Object> consultaGasto(string dato)
         {
             MySqlDataReader reader;
@@ -17,7 +19,7 @@ namespace PryCampo
 
             if (dato == null)
             {
-                sql = "SELECT tipo, precio, descripcion, fecha FROM gastos_mayo23 ORDER BY tipo ASC";
+                sql = "SELECT tipo, precio, descripcion, fecha FROM " +Mes+ " ORDER BY tipo ASC";
             }
 
             try
