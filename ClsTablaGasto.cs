@@ -19,7 +19,7 @@ namespace PryCampo
 
             if (dato == null)
             {
-                sql = "SELECT tipo, precio, descripcion, fecha FROM " +Mes+ " ORDER BY tipo ASC";
+                sql = "SELECT id, tipo, precio, descripcion, fecha FROM " +Mes+ " ORDER BY tipo ASC";
             }
 
             try
@@ -32,11 +32,12 @@ namespace PryCampo
                 while (reader.Read())
                 {
                     Productos _producto = new Productos();
-                    
-                    _producto.Tipo = reader.GetString(0);
-                    _producto.Precio = decimal.Parse(reader.GetString(1));
-                    _producto.Descripcion = reader.GetString(2);
-                    _producto.Fecha = reader.GetString(3);
+
+                    _producto.Id = reader.GetInt32(0);
+                    _producto.Tipo = reader.GetString(1);
+                    _producto.Precio = decimal.Parse(reader.GetString(2));
+                    _producto.Descripcion = reader.GetString(3);
+                    _producto.Fecha = reader.GetString(4);
                     lista.Add(_producto);
                 }
             }

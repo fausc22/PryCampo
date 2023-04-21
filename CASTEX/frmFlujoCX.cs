@@ -25,9 +25,9 @@ namespace PryCampo.CASTEX
         private void frmFlujoCX_Load(object sender, EventArgs e)
         {
 
-
-
-
+            
+            
+            
 
 
 
@@ -253,16 +253,16 @@ namespace PryCampo.CASTEX
                 {
                    contadorIngreso = contadorIngreso + int.Parse(dgvIngreso.Rows[i].Cells[2].Value.ToString());
                 }
-                lblIngresoTotal.Text = contadorIngreso.ToString();
+                lblIngresoTotal.Text = "$ " + contadorIngreso.ToString();
 
             for (int i = 0; i < dgvGasto.Rows.Count; i++)
             {
                 contadorGasto = contadorGasto + int.Parse(dgvGasto.Rows[i].Cells[2].Value.ToString());
             }
-            lblGastoTotal.Text = contadorGasto.ToString();
+            lblGastoTotal.Text = "$ " + contadorGasto.ToString();
 
             Total = contadorIngreso - contadorGasto;
-            lblResultadoTotal.Text = Total.ToString();
+            lblResultadoTotal.Text = "$ " + Total.ToString();
 
             if (Total >= 0)
             {
@@ -274,18 +274,18 @@ namespace PryCampo.CASTEX
                 
                 lblResultadoTotal.BackColor = Color.Red;
             }
-
+            groupBox1.Visible = true;
             lblIngresoTotal.Visible = true;
             lblGastoTotal.Visible = true;
             lblResultadoTotal.Visible = true;
             btnHistoria.Visible = true;
             lblSigno1.Visible = true;
             lblSigno2.Visible = true;
-            lblSigno3.Visible = true;
+            
             lblResultadoTitulo.Visible = true;
             btnEditarIngreso.Enabled = true;
             btnEditarGasto.Enabled = true;
-            btnEliminar.Enabled = true;
+            btnEliminarIngreso.Enabled = true;
 
 
 
@@ -294,11 +294,11 @@ namespace PryCampo.CASTEX
         private void button1_Click(object sender, EventArgs e)
         {
             StreamWriter sw = new StreamWriter("editI.txt", false);
-            sw.WriteLine(dgvIngreso.CurrentRow.Cells[1].Value.ToString() + "," + dgvIngreso.CurrentRow.Cells[2].Value.ToString() + "," + dgvIngreso.CurrentRow.Cells[3].Value.ToString());
+            sw.WriteLine(dgvIngreso.CurrentRow.Cells[1].Value.ToString() + "," + dgvIngreso.CurrentRow.Cells[2].Value.ToString() + "," + dgvIngreso.CurrentRow.Cells[4].Value.ToString() + "," + dgvIngreso.CurrentRow.Cells[0].Value.ToString());
             sw.Close();
             sw.Dispose();
 
-            
+            this.Hide();
             frmEditarIngreso frmEditarRegistro = new frmEditarIngreso();
             frmEditarRegistro.ShowDialog();
             
@@ -308,12 +308,13 @@ namespace PryCampo.CASTEX
         private void btnEditarGasto_Click(object sender, EventArgs e)
         {
             StreamWriter sw = new StreamWriter("editG.txt", false);
-            sw.WriteLine(dgvGasto.CurrentRow.Cells[1].Value.ToString() + "," + dgvGasto.CurrentRow.Cells[2].Value.ToString() + "," + dgvGasto.CurrentRow.Cells[3].Value.ToString());
+            sw.WriteLine(dgvGasto.CurrentRow.Cells[1].Value.ToString() + "," + dgvGasto.CurrentRow.Cells[2].Value.ToString() + "," + dgvGasto.CurrentRow.Cells[4].Value.ToString());
             sw.Close();
             sw.Dispose();
 
             frmEditarGasto frm = new frmEditarGasto();
             frm.ShowDialog();
+            this.Hide();
             
 
 
@@ -324,6 +325,21 @@ namespace PryCampo.CASTEX
         {
             MessageBox.Show("Debe seleccionar un mes para que se habilite la información. Si desea editar o eliminar un registro, debe clickear el mismo en la tabla y luego presionar los distintos botones presentes: EDITAR INGRESO, EDITAR GASTO, ELIMINAR REGISTRO.",
                 "AYUDA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void dgvGasto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminarIngreso_Click(object sender, EventArgs e)
+        {
+            
         }
     }
     }
