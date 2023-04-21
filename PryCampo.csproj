@@ -120,16 +120,16 @@
     <Compile Include="CHARITO\AGRICOLA\frmCharitoAgr.Designer.cs">
       <DependentUpon>frmCharitoAgr.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditarGasto.cs">
+    <Compile Include="CASTEX\frmEditarGasto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditarGasto.Designer.cs">
+    <Compile Include="CASTEX\frmEditarGasto.Designer.cs">
       <DependentUpon>frmEditarGasto.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditarIngreso.cs">
+    <Compile Include="CASTEX\frmEditarIngreso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditarIngreso.Designer.cs">
+    <Compile Include="CASTEX\frmEditarIngreso.Designer.cs">
       <DependentUpon>frmEditarIngreso.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
@@ -174,10 +174,10 @@
     <EmbeddedResource Include="CHARITO\AGRICOLA\frmCharitoAgr.resx">
       <DependentUpon>frmCharitoAgr.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditarGasto.resx">
+    <EmbeddedResource Include="CASTEX\frmEditarGasto.resx">
       <DependentUpon>frmEditarGasto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditarIngreso.resx">
+    <EmbeddedResource Include="CASTEX\frmEditarIngreso.resx">
       <DependentUpon>frmEditarIngreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">

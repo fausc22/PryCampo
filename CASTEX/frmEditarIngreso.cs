@@ -23,7 +23,7 @@ namespace PryCampo
         private void frmEditarRegistro_Load(object sender, EventArgs e)
         {
             string linea = "";
-            StreamReader sr = new StreamReader("edit.txt");
+            StreamReader sr = new StreamReader("editI.txt");
             while (sr.EndOfStream == false)
             {
                 linea = sr.ReadLine();

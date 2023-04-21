@@ -301,7 +301,7 @@ namespace PryCampo.CASTEX
             
             frmEditarIngreso frmEditarRegistro = new frmEditarIngreso();
             frmEditarRegistro.ShowDialog();
-            this.Hide();
+            
 
         }
 
