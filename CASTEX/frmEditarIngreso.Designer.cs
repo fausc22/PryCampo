@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
+            this.lblMes = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -133,12 +134,24 @@
             this.lblId.Text = "label";
             this.lblId.Visible = false;
             // 
+            // lblMes
+            // 
+            this.lblMes.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.lblMes.AutoSize = true;
+            this.lblMes.Location = new System.Drawing.Point(23, 184);
+            this.lblMes.Name = "lblMes";
+            this.lblMes.Size = new System.Drawing.Size(29, 13);
+            this.lblMes.TabIndex = 29;
+            this.lblMes.Text = "label";
+            this.lblMes.Visible = false;
+            // 
             // frmEditarIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(228, 271);
+            this.Controls.Add(this.lblMes);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -169,5 +182,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblId;
+        public System.Windows.Forms.Label lblMes;
     }
 }

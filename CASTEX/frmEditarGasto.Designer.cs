@@ -37,6 +37,8 @@
             this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblId = new System.Windows.Forms.Label();
+            this.lblMes = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -108,6 +110,7 @@
             this.btnGuardar.TabIndex = 17;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -121,12 +124,35 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(20, 165);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(29, 13);
+            this.lblId.TabIndex = 29;
+            this.lblId.Text = "label";
+            this.lblId.Visible = false;
+            // 
+            // lblMes
+            // 
+            this.lblMes.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.lblMes.AutoSize = true;
+            this.lblMes.Location = new System.Drawing.Point(20, 192);
+            this.lblMes.Name = "lblMes";
+            this.lblMes.Size = new System.Drawing.Size(29, 13);
+            this.lblMes.TabIndex = 30;
+            this.lblMes.Text = "label";
+            this.lblMes.Visible = false;
+            // 
             // frmEditarGasto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(216, 272);
+            this.Controls.Add(this.lblMes);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtDescripcion);
@@ -156,5 +182,7 @@
         private System.Windows.Forms.RichTextBox txtDescripcion;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblId;
+        public System.Windows.Forms.Label lblMes;
     }
 }

@@ -53,7 +53,7 @@ namespace PryCampo.CASTEX
         {
             List<Productos> lista = new List<Productos>();
             ClsTablaIngreso TablaIngreso = new ClsTablaIngreso();
-
+            
             if (cmbMes.Text == "ENERO")
             {
                 TablaIngreso.Mes = "ingresos_enero23";
@@ -300,6 +300,87 @@ namespace PryCampo.CASTEX
 
             this.Hide();
             frmEditarIngreso frmEditarRegistro = new frmEditarIngreso();
+            if (cmbMes.Text == "ENERO")
+            {
+                frmEditarRegistro.lblMes.Text = "ingresos_enero23";
+            }
+            else
+            {
+                if (cmbMes.Text == "FEBRERO")
+                {
+                    frmEditarRegistro.lblMes.Text = "ingresos_febrero23";
+                }
+                else
+                {
+                    if (cmbMes.Text == "MARZO")
+                    {
+                        frmEditarRegistro.lblMes.Text = "ingresos_marzo23";
+                    }
+                    else
+                    {
+                        if (cmbMes.Text == "ABRIL")
+                        {
+                            frmEditarRegistro.lblMes.Text = "ingresos_abril23";
+                        }
+                        else
+                        {
+                            if (cmbMes.Text == "MAYO")
+                            {
+                                frmEditarRegistro.lblMes.Text = "ingresos_mayo23";
+                            }
+                            else
+                            {
+                                if (cmbMes.Text == "JUNIO")
+                                {
+                                    frmEditarRegistro.lblMes.Text = "ingresos_junio23";
+                                }
+                                else
+                                {
+                                    if (cmbMes.Text == "JULIO")
+                                    {
+                                        frmEditarRegistro.lblMes.Text = "ingresos_julio23";
+                                    }
+                                    else
+                                    {
+                                        if (cmbMes.Text == "AGOSTO")
+                                        {
+                                            frmEditarRegistro.lblMes.Text = "ingresos_agosto23";
+                                        }
+                                        else
+                                        {
+                                            if (cmbMes.Text == "SEPTIEMBRE")
+                                            {
+                                                frmEditarRegistro.lblMes.Text = "ingresos_septiembre23";
+                                            }
+                                            else
+                                            {
+                                                if (cmbMes.Text == "OCTUBRE")
+                                                {
+                                                    frmEditarRegistro.lblMes.Text = "ingresos_octubre23";
+                                                }
+                                                else
+                                                {
+                                                    if (cmbMes.Text == "NOVIEMBRE")
+                                                    {
+                                                        frmEditarRegistro.lblMes.Text = "ingresos_noviembre23";
+                                                    }
+                                                    else
+                                                    {
+                                                        if (cmbMes.Text == "DICIEMBRE")
+                                                        {
+                                                            frmEditarRegistro.lblMes.Text = "ingresos_diciembre23";
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             frmEditarRegistro.ShowDialog();
             
 
@@ -308,13 +389,101 @@ namespace PryCampo.CASTEX
         private void btnEditarGasto_Click(object sender, EventArgs e)
         {
             StreamWriter sw = new StreamWriter("editG.txt", false);
-            sw.WriteLine(dgvGasto.CurrentRow.Cells[1].Value.ToString() + "," + dgvGasto.CurrentRow.Cells[2].Value.ToString() + "," + dgvGasto.CurrentRow.Cells[4].Value.ToString());
+            sw.WriteLine(dgvGasto.CurrentRow.Cells[1].Value.ToString() + "," + dgvGasto.CurrentRow.Cells[2].Value.ToString() + "," + dgvGasto.CurrentRow.Cells[4].Value.ToString() + "," + dgvGasto.CurrentRow.Cells[0].Value.ToString());
             sw.Close();
             sw.Dispose();
 
-            frmEditarGasto frm = new frmEditarGasto();
-            frm.ShowDialog();
             this.Hide();
+            frmEditarGasto frm = new frmEditarGasto();
+            if (cmbMes.Text == "ENERO")
+            {
+                frm.lblMes.Text = "gastos_enero23";
+            }
+            else
+            {
+                if (cmbMes.Text == "FEBRERO")
+                {
+                    frm.lblMes.Text = "gastos_febrero23";
+                }
+                else
+                {
+                    if (cmbMes.Text == "MARZO")
+                    {
+                        frm.lblMes.Text = "gastos_marzo23";
+                    }
+                    else
+                    {
+                        if (cmbMes.Text == "ABRIL")
+                        {
+                            frm.lblMes.Text = "gastos_abril23";
+                        }
+                        else
+                        {
+                            if (cmbMes.Text == "MAYO")
+                            {
+                                frm.lblMes.Text = "gastos_mayo23";
+                            }
+                            else
+                            {
+                                if (cmbMes.Text == "JUNIO")
+                                {
+                                    frm.lblMes.Text = "gastos_junio23";
+                                }
+                                else
+                                {
+                                    if (cmbMes.Text == "JULIO")
+                                    {
+                                        frm.lblMes.Text = "gastos_julio23";
+                                    }
+                                    else
+                                    {
+                                        if (cmbMes.Text == "AGOSTO")
+                                        {
+                                            frm.lblMes.Text = "gastos_agosto23";
+                                        }
+                                        else
+                                        {
+                                            if (cmbMes.Text == "SEPTIEMBRE")
+                                            {
+                                                frm.lblMes.Text = "gastos_septiembre23";
+                                            }
+                                            else
+                                            {
+                                                if (cmbMes.Text == "OCTUBRE")
+                                                {
+                                                    frm.lblMes.Text = "gastos_octubre23";
+                                                }
+                                                else
+                                                {
+                                                    if (cmbMes.Text == "NOVIEMBRE")
+                                                    {
+                                                        frm.lblMes.Text = "gastos_noviembre23";
+                                                    }
+                                                    else
+                                                    {
+                                                        if (cmbMes.Text == "DICIEMBRE")
+                                                        {
+                                                            frm.lblMes.Text = "gastos_diciembre23";
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+
+
+                dgvGasto.DataSource = TablaGasto.consultaGasto(dato);
+
+            }
+            frm.ShowDialog();
+            
             
 
 

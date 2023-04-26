@@ -39,7 +39,7 @@ namespace PryCampo
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            
+
             this.Hide();
         }
 
@@ -55,7 +55,7 @@ namespace PryCampo
             _producto.Fecha = DateTime.Now.ToString("dd/MM/yyyy");
 
             ClsTablaIngreso ctrl = new ClsTablaIngreso();
-            ctrl.Mes = "ingresos_mayo23";
+            ctrl.Mes = lblMes.Text;
             ctrl.actualizarIngreso(_producto);
 
 
@@ -143,11 +143,11 @@ namespace PryCampo
                 }
             }
 
-            
+            this.Hide();
             frmFlujoCX frmFlujoCX = new frmFlujoCX();
             frmFlujoCX.cmbMes.Text = mes1;
             frmFlujoCX.ShowDialog();
-
+            
         }
     }
 }
