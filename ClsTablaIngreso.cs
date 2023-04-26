@@ -82,11 +82,11 @@ namespace PryCampo
             return bandera;
         }
 
-        public bool eliminarIngreso(Productos datos)
+        public bool eliminarIngreso(int id, string Mes)
         {
             bool bandera = false;
 
-            string sql = "DELETE FROM " + Mes + "  WHERE tipo='" + datos.Tipo + "', precio='" + datos.Precio + "', descripcion='" + datos.Descripcion + "')";
+            string sql = "DELETE FROM " + Mes + "  WHERE id='" + id + "')";
 
             try
             {

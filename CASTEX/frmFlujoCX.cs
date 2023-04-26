@@ -25,9 +25,9 @@ namespace PryCampo.CASTEX
         private void frmFlujoCX_Load(object sender, EventArgs e)
         {
 
-            
-            
-            
+
+
+
 
 
 
@@ -53,7 +53,7 @@ namespace PryCampo.CASTEX
         {
             List<Productos> lista = new List<Productos>();
             ClsTablaIngreso TablaIngreso = new ClsTablaIngreso();
-            
+
             if (cmbMes.Text == "ENERO")
             {
                 TablaIngreso.Mes = "ingresos_enero23";
@@ -137,7 +137,7 @@ namespace PryCampo.CASTEX
             }
 
 
-            
+
 
             dgvIngreso.DataSource = TablaIngreso.consultaIngreso(dato);
 
@@ -146,7 +146,7 @@ namespace PryCampo.CASTEX
         private void cargarTablaGasto(string dato)
         {
             List<Productos> lista = new List<Productos>();
-            ClsTablaGasto TablaGasto = new ClsTablaGasto();
+            ClsTablaIngreso TablaGasto = new ClsTablaIngreso();
 
             if (cmbMes.Text == "ENERO")
             {
@@ -232,28 +232,28 @@ namespace PryCampo.CASTEX
 
 
 
-                dgvGasto.DataSource = TablaGasto.consultaGasto(dato);
+                dgvGasto.DataSource = TablaGasto.consultaIngreso(dato);
 
             }
 
-            dgvGasto.DataSource = TablaGasto.consultaGasto(dato);
+            dgvGasto.DataSource = TablaGasto.consultaIngreso(dato);
         }
 
         private void cmbMes_SelectedIndexChanged(object sender, EventArgs e)
-            {
-                int contadorIngreso = 0;
+        {
+            int contadorIngreso = 0;
             int contadorGasto = 0;
             int Total = 0;
-                cargarTablaIngreso(null);
-                cargarTablaGasto(null);
+            cargarTablaIngreso(null);
+            cargarTablaGasto(null);
 
 
 
-                for (int i = 0; i < dgvIngreso.Rows.Count; i++)
-                {
-                   contadorIngreso = contadorIngreso + int.Parse(dgvIngreso.Rows[i].Cells[2].Value.ToString());
-                }
-                lblIngresoTotal.Text = "$ " + contadorIngreso.ToString();
+            for (int i = 0; i < dgvIngreso.Rows.Count; i++)
+            {
+                contadorIngreso = contadorIngreso + int.Parse(dgvIngreso.Rows[i].Cells[2].Value.ToString());
+            }
+            lblIngresoTotal.Text = "$ " + contadorIngreso.ToString();
 
             for (int i = 0; i < dgvGasto.Rows.Count; i++)
             {
@@ -266,12 +266,12 @@ namespace PryCampo.CASTEX
 
             if (Total >= 0)
             {
-                
+
                 lblResultadoTotal.BackColor = Color.Green;
             }
             else
             {
-                
+
                 lblResultadoTotal.BackColor = Color.Red;
             }
             groupBox1.Visible = true;
@@ -281,7 +281,7 @@ namespace PryCampo.CASTEX
             btnHistoria.Visible = true;
             lblSigno1.Visible = true;
             lblSigno2.Visible = true;
-            
+
             lblResultadoTitulo.Visible = true;
             btnEditarIngreso.Enabled = true;
             btnEditarGasto.Enabled = true;
@@ -382,7 +382,7 @@ namespace PryCampo.CASTEX
                 }
             }
             frmEditarRegistro.ShowDialog();
-            
+
 
         }
 
@@ -479,15 +479,15 @@ namespace PryCampo.CASTEX
 
 
 
-                dgvGasto.DataSource = TablaGasto.consultaGasto(dato);
+
 
             }
             frm.ShowDialog();
-            
-            
 
 
-            
+
+
+
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)
@@ -508,8 +508,213 @@ namespace PryCampo.CASTEX
 
         private void btnEliminarIngreso_Click(object sender, EventArgs e)
         {
-            
+            DialogResult resultado = MessageBox.Show("Seguro que desea eliminar el registro?", "Salir",
+                MessageBoxButtons.YesNoCancel);
+            if (resultado == DialogResult.Yes)
+            {
+                string Mes = "";
+
+                int id = int.Parse(dgvIngreso.CurrentRow.Cells[0].Value.ToString());
+
+
+                if (cmbMes.Text == "ENERO")
+                {
+                    Mes = "ingresos_enero23";
+                }
+                else
+                {
+                    if (cmbMes.Text == "FEBRERO")
+                    {
+                        Mes = "ingresos_febrero23";
+                    }
+                    else
+                    {
+                        if (cmbMes.Text == "MARZO")
+                        {
+                            Mes = "ingresos_marzo23";
+                        }
+                        else
+                        {
+                            if (cmbMes.Text == "ABRIL")
+                            {
+                                Mes = "ingresos_abril23";
+                            }
+                            else
+                            {
+                                if (cmbMes.Text == "MAYO")
+                                {
+                                    Mes = "ingresos_mayo23";
+                                }
+                                else
+                                {
+                                    if (cmbMes.Text == "JUNIO")
+                                    {
+                                        Mes = "ingresos_junio23";
+                                    }
+                                    else
+                                    {
+                                        if (cmbMes.Text == "JULIO")
+                                        {
+                                            Mes = "ingresos_julio23";
+                                        }
+                                        else
+                                        {
+                                            if (cmbMes.Text == "AGOSTO")
+                                            {
+                                                Mes = "ingresos_agosto23";
+                                            }
+                                            else
+                                            {
+                                                if (cmbMes.Text == "SEPTIEMBRE")
+                                                {
+                                                    Mes = "ingresos_septiembre23";
+                                                }
+                                                else
+                                                {
+                                                    if (cmbMes.Text == "OCTUBRE")
+                                                    {
+                                                        Mes = "ingresos_octubre23";
+                                                    }
+                                                    else
+                                                    {
+                                                        if (cmbMes.Text == "NOVIEMBRE")
+                                                        {
+                                                            Mes = "ingresos_noviembre23";
+                                                        }
+                                                        else
+                                                        {
+                                                            if (cmbMes.Text == "DICIEMBRE")
+                                                            {
+                                                                Mes = "ingresos_diciembre23";
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+
+
+
+
+
+
+
+
+
+                ClsTablaIngreso ctrl = new ClsTablaIngreso();
+
+
+
+                    ctrl.eliminarIngreso(id, Mes);
+                
+            }
+        }
+
+        private void btnEliminarGasto_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Seguro que desea eliminar el registro?", "Salir",
+                MessageBoxButtons.YesNoCancel);
+            if (resultado == DialogResult.Yes)
+            {
+                string Mes = "";
+
+                int id = int.Parse(dgvGasto.CurrentRow.Cells[0].Value.ToString());
+
+
+                if (cmbMes.Text == "ENERO")
+                {
+                    Mes = "gastos_enero23";
+                }
+                else
+                {
+                    if (cmbMes.Text == "FEBRERO")
+                    {
+                        Mes = "gastos_febrero23";
+                    }
+                    else
+                    {
+                        if (cmbMes.Text == "MARZO")
+                        {
+                            Mes = "gastos_marzo23";
+                        }
+                        else
+                        {
+                            if (cmbMes.Text == "ABRIL")
+                            {
+                                Mes = "gastos_abril23";
+                            }
+                            else
+                            {
+                                if (cmbMes.Text == "MAYO")
+                                {
+                                    Mes = "gastos_mayo23";
+                                }
+                                else
+                                {
+                                    if (cmbMes.Text == "JUNIO")
+                                    {
+                                        Mes = "gastos_junio23";
+                                    }
+                                    else
+                                    {
+                                        if (cmbMes.Text == "JULIO")
+                                        {
+                                            Mes = "gastos_julio23";
+                                        }
+                                        else
+                                        {
+                                            if (cmbMes.Text == "AGOSTO")
+                                            {
+                                                Mes = "gastos_agosto23";
+                                            }
+                                            else
+                                            {
+                                                if (cmbMes.Text == "SEPTIEMBRE")
+                                                {
+                                                    Mes = "gastos_septiembre23";
+                                                }
+                                                else
+                                                {
+                                                    if (cmbMes.Text == "OCTUBRE")
+                                                    {
+                                                        Mes = "gastos_octubre23";
+                                                    }
+                                                    else
+                                                    {
+                                                        if (cmbMes.Text == "NOVIEMBRE")
+                                                        {
+                                                            Mes = "gastos_noviembre23";
+                                                        }
+                                                        else
+                                                        {
+                                                            if (cmbMes.Text == "DICIEMBRE")
+                                                            {
+                                                                Mes = "gastos_diciembre23";
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                    ClsTablaIngreso ctrl = new ClsTablaIngreso();
+                ctrl.eliminarIngreso(id, Mes);
+            }
         }
     }
-    }
+}
 

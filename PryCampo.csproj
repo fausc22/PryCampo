@@ -110,7 +110,6 @@
     <Compile Include="CHARITO\GANADERIA\frmRegistrosGan.Designer.cs">
       <DependentUpon>frmRegistrosGan.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClsTablaGasto.cs" />
     <Compile Include="ConexionDB.cs" />
     <Compile Include="ConexionDBStatic.cs" />
     <Compile Include="ClsTablaIngreso.cs" />
