@@ -82,11 +82,11 @@ namespace PryCampo
             return bandera;
         }
 
-        public bool eliminarIngreso(int id, string Mes)
+        public bool eliminarIngreso(string id, string Mes)
         {
             bool bandera = false;
 
-            string sql = "DELETE FROM " + Mes + "  WHERE id='" + id + "')";
+            string sql = "DELETE FROM " + Mes + "  WHERE id='" + id + "'";
 
             try
             {
@@ -108,5 +108,7 @@ namespace PryCampo
 
 
         }
+
+        
     }
 }

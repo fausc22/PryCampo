@@ -514,7 +514,7 @@ namespace PryCampo.CASTEX
             {
                 string Mes = "";
 
-                int id = int.Parse(dgvIngreso.CurrentRow.Cells[0].Value.ToString());
+                string id = dgvIngreso.CurrentRow.Cells[0].Value.ToString();
 
 
                 if (cmbMes.Text == "ENERO")
@@ -712,7 +712,7 @@ namespace PryCampo.CASTEX
                 }
 
                     ClsTablaIngreso ctrl = new ClsTablaIngreso();
-                ctrl.eliminarIngreso(id, Mes);
+               // ctrl.eliminarIngreso(id, Mes);
             }
         }
     }
