@@ -42,21 +42,22 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSelec = new System.Windows.Forms.Button();
+            this.optTotal = new System.Windows.Forms.RadioButton();
+            this.optMes = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.chGastos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.chTotal = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.optMes = new System.Windows.Forms.RadioButton();
-            this.optTotal = new System.Windows.Forms.RadioButton();
-            this.btnSelec = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
+            this.cmbMes = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.chIngresos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -117,17 +118,6 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnSelec);
-            this.groupBox2.Controls.Add(this.optTotal);
-            this.groupBox2.Controls.Add(this.optMes);
-            this.groupBox2.Location = new System.Drawing.Point(473, 73);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(228, 82);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -137,6 +127,51 @@
             this.label1.Size = new System.Drawing.Size(129, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "INGRESOS";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.cmbMes);
+            this.groupBox2.Controls.Add(this.optTotal);
+            this.groupBox2.Controls.Add(this.optMes);
+            this.groupBox2.Location = new System.Drawing.Point(473, 73);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(228, 73);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            // 
+            // btnSelec
+            // 
+            this.btnSelec.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnSelec.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSelec.Location = new System.Drawing.Point(557, 152);
+            this.btnSelec.Name = "btnSelec";
+            this.btnSelec.Size = new System.Drawing.Size(75, 23);
+            this.btnSelec.TabIndex = 18;
+            this.btnSelec.Text = "Seleccionar";
+            this.btnSelec.UseVisualStyleBackColor = false;
+            this.btnSelec.Click += new System.EventHandler(this.btnSelec_Click);
+            // 
+            // optTotal
+            // 
+            this.optTotal.AutoSize = true;
+            this.optTotal.Location = new System.Drawing.Point(147, 19);
+            this.optTotal.Name = "optTotal";
+            this.optTotal.Size = new System.Drawing.Size(60, 17);
+            this.optTotal.TabIndex = 1;
+            this.optTotal.TabStop = true;
+            this.optTotal.Text = "Totales";
+            this.optTotal.UseVisualStyleBackColor = true;
+            // 
+            // optMes
+            // 
+            this.optMes.AutoSize = true;
+            this.optMes.Location = new System.Drawing.Point(6, 19);
+            this.optMes.Name = "optMes";
+            this.optMes.Size = new System.Drawing.Size(123, 17);
+            this.optMes.TabIndex = 0;
+            this.optMes.TabStop = true;
+            this.optMes.Text = "Por Mes (Categorias)";
+            this.optMes.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -178,7 +213,7 @@
             // 
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.chTotal);
-            this.groupBox4.Location = new System.Drawing.Point(406, 161);
+            this.groupBox4.Location = new System.Drawing.Point(406, 175);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(388, 399);
             this.groupBox4.TabIndex = 7;
@@ -209,39 +244,6 @@
             this.chTotal.Size = new System.Drawing.Size(328, 279);
             this.chTotal.TabIndex = 0;
             this.chTotal.Text = "chart1";
-            // 
-            // optMes
-            // 
-            this.optMes.AutoSize = true;
-            this.optMes.Location = new System.Drawing.Point(6, 19);
-            this.optMes.Name = "optMes";
-            this.optMes.Size = new System.Drawing.Size(123, 17);
-            this.optMes.TabIndex = 0;
-            this.optMes.TabStop = true;
-            this.optMes.Text = "Por Mes (Categorias)";
-            this.optMes.UseVisualStyleBackColor = true;
-            // 
-            // optTotal
-            // 
-            this.optTotal.AutoSize = true;
-            this.optTotal.Location = new System.Drawing.Point(147, 19);
-            this.optTotal.Name = "optTotal";
-            this.optTotal.Size = new System.Drawing.Size(60, 17);
-            this.optTotal.TabIndex = 1;
-            this.optTotal.TabStop = true;
-            this.optTotal.Text = "Totales";
-            this.optTotal.UseVisualStyleBackColor = true;
-            // 
-            // btnSelec
-            // 
-            this.btnSelec.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnSelec.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSelec.Location = new System.Drawing.Point(77, 53);
-            this.btnSelec.Name = "btnSelec";
-            this.btnSelec.Size = new System.Drawing.Size(75, 23);
-            this.btnSelec.TabIndex = 18;
-            this.btnSelec.Text = "Seleccionar";
-            this.btnSelec.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -285,13 +287,36 @@
             this.btnAyuda.Text = "AYUDA";
             this.btnAyuda.UseVisualStyleBackColor = false;
             // 
+            // cmbMes
+            // 
+            this.cmbMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMes.FormattingEnabled = true;
+            this.cmbMes.Items.AddRange(new object[] {
+            "ENERO",
+            "FEBRERO",
+            "MARZO",
+            "ABRIL",
+            "MAYO",
+            "JUNIO",
+            "JULIO",
+            "AGOSTO",
+            "SEPTIEMBRE",
+            "OCTUBRE",
+            "NOVIEMBRE",
+            "DICIEMBRE"});
+            this.cmbMes.Location = new System.Drawing.Point(6, 42);
+            this.cmbMes.Name = "cmbMes";
+            this.cmbMes.Size = new System.Drawing.Size(123, 21);
+            this.cmbMes.TabIndex = 19;
+            // 
             // frmInformeCX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1228, 586);
+            this.ClientSize = new System.Drawing.Size(1236, 670);
             this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnSelec);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -343,5 +368,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnAyuda;
+        private System.Windows.Forms.ComboBox cmbMes;
     }
 }

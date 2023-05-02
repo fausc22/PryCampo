@@ -163,6 +163,7 @@
             this.btnHistoria.Text = "VER MAS";
             this.btnHistoria.UseVisualStyleBackColor = false;
             this.btnHistoria.Visible = false;
+            this.btnHistoria.Click += new System.EventHandler(this.btnHistoria_Click);
             // 
             // btnSalir
             // 

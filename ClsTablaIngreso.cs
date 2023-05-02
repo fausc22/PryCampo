@@ -109,6 +109,28 @@ namespace PryCampo
 
         }
 
+        public bool SumaTotales(Productos datos)
+        {
+            bool bandera = false;
+            string sql = "UPDATE totales2023 SET ingresos='" + datos.Ingresos + "', gastos='" + datos.Gastos + "', totales='" + datos.Resultados1 + "' WHERE mes='" + Mes + "'";
+
+            try
+            {
+                MySqlConnection conexionDB = base.conexion();
+                conexionDB.Open();
+                MySqlCommand comando = new MySqlCommand(sql, conexionDB);
+                comando.ExecuteNonQuery();
+                bandera = true;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+                bandera = false;
+            }
+
+            return bandera;
+        }
+
         
     }
 }

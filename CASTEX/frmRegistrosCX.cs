@@ -253,10 +253,16 @@ namespace PryCampo.CASTEX
             cmbMes.SelectedIndex = -1;
             txtIngreso.Clear();
             txtPrecioIngreso.Clear();
+            txtPrecioIngreso.Enabled = false;
             txtDescripcionI.Clear();
+            txtDescripcionI.Enabled = false;
             txtGasto.Clear();
             txtPrecioGasto.Clear();
+            txtPrecioGasto.Enabled = false;
             txtDescripcionG.Clear();
+            txtDescripcionG.Enabled = false;
+            txtIngreso.Enabled = false;
+            txtGasto.Enabled = false;
 
         }
 
